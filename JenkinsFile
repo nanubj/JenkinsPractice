@@ -1,18 +1,16 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Hello') {
-            agent{label 'L1'}
             steps {
-                echo 'Hello World'
+                echo 'Hello World Git'
             }
         }
         
         stage('HelloYou') {
-            agent{label 'L2'}
             steps {
-                echo 'Hello World'
+                echo 'Hello World Gitt'
             }
         }
     }
