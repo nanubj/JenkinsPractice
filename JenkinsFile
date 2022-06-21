@@ -1,0 +1,19 @@
+pipeline {
+    agent none
+
+    stages {
+        stage('Hello') {
+            agent{label 'L1'}
+            steps {
+                echo 'Hello World'
+            }
+        }
+        
+        stage('HelloYou') {
+            agent{label 'L2'}
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
