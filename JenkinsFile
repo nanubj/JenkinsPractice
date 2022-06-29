@@ -1,8 +1,9 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Test') {
+            agent{label 'L1'}
             steps {
                 echo 'Testing'
             }
