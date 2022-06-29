@@ -3,11 +3,27 @@ pipeline {
 
     stages {
         stage('Test') {
-
             steps {
                 echo 'Testing'
             }
-        }     
+        }
+        
+        stage('Parallel'){
+            parallel{
+                stage('V1'){
+                    steps{
+                    echo 'V1 Parallel'
+                    }
+                }
+                
+                stage('V2'){
+                    steps{
+                    echo 'V2 Parallel'
+                    }
+                }
+                
+            }
+        }
         
     }
 }
