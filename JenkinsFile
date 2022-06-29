@@ -3,26 +3,11 @@ pipeline {
 
     stages {
         stage('Test') {
-            agent{Label 'L1'}
+
             steps {
                 echo 'Testing'
             }
-        }
-        
-        stage('Build') {
-            agent{Label 'L2'}
-            steps {
-                echo 'Building'
-            }
-        }
-        
-        stage('Deploy') {
-            agent{Label 'L2'}
-            steps {
-                echo 'Deploying'
-            }
-        }
-        
+        }     
         
     }
 }
