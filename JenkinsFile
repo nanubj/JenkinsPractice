@@ -12,12 +12,14 @@ pipeline {
         stage('Parallel'){
             parallel{
                 stage('V1'){
+                agent{label 'L1'}
                     steps{
                     echo 'V1 Parallel'
                     }
                 }
                 
                 stage('V2'){
+                agent{label 'L2'}
                     steps{
                     echo 'V2 Parallel'
                     }
