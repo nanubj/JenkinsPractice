@@ -9,14 +9,14 @@ pipeline {
             }
         }
         
-        stage('Test') {
+        stage('Build') {
             agent{Label 'L2'}
             steps {
                 echo 'Building'
             }
         }
         
-        stage('Test') {
+        stage('Deploy') {
             agent{Label 'L2'}
             steps {
                 echo 'Deploying'
